@@ -3,6 +3,7 @@ import AppLayouts from "./AppLayouts";
 import Button from "./Button";
 import { useNavigate } from "react-router-dom";
 import { restart } from "../features/Quiz/QuizSlice";
+import { useQuizId } from "../features/Quiz/useQuizId";
 
 function FinishScreen() {
     const points = useSelector((state) => state.points)
@@ -12,10 +13,13 @@ function FinishScreen() {
     const percentage = (points / possiblePoints) * 100
     const dispatch=useDispatch()
     const navigate=useNavigate()
+    const { Quiz } = useQuizId();
+    console.log(Quiz)
+
     const RestartHanlde=(e)=>{
         e.preventDefault()
         dispatch(restart())
-        navigate(-2)
+        navigate(-3)
     }
     let emoji;
     if (percentage === 100) emoji = '🥇';
