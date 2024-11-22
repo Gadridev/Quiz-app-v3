@@ -77,20 +77,22 @@ QuizMasterPro is a dynamic quiz application that offers a wide variety of quizze
     Copy code
     
     `cd backend
-    npm install
-    npm run start:dev` 
+     npm install`
+    <br><br>
+    `npm run start:dev`
     
-4.  **Frontend Setup**
+5.  **Frontend Setup**
     
     bash
     
     Copy code
     
     `cd frontend
-    npm  install
-    npm run dev` 
+    npm  install`
+    <br><br>
+   `npm run dev` 
     
-5.  **Environment Variables**  
+7.  **Environment Variables**  
     Create a `.env` file in the `backend` folder and configure the following:
     
     env
